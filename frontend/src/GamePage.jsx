@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 
 const GamePage = () => {
 
-    const socket = useMemo(() => io("http://localhost:8000"), []);
+    const socket = useMemo(() => io(), []);
     const loc = useLocation();
     const roomId = loc.state.roomData.roomId;
     const playerName = loc.state.playerName;
