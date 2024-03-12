@@ -1,0 +1,179 @@
+.homePage-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+}
+
+.homePage-wrapper #btn-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.homePage-wrapper #btn-container button {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 12pt;
+    -webkit-text-stroke-width: .6pt;
+    letter-spacing: 1.1pt;
+    background-color: #0083ff96;
+    color: white;
+    box-shadow: 0 0 8px aqua;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: .4s all ease;
+}
+
+.homePage-wrapper #btn-container button:hover,
+.homePage-wrapper #btn-container button:focus {
+    box-shadow: 0 0 12px 5px aqua;
+    transform: scale(.93);
+    color: aqua;
+}
+
+/*========================================================================INPUT DESIGN====================================================*/
+
+.room-create-wrapper {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-create-wrapper .input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    position: relative;
+    color: white;
+    background-color: rgba(81, 81, 81, 0.532);
+    border-radius: 15px;
+    height: 300px;
+    padding-top: 30px;
+}
+
+.room-create-wrapper .input-container input {
+    width: 320px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(0, 166, 255);
+    padding: 0 8px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 95%;
+    margin-bottom: 15px;
+    background-color: transparent;
+    color: white;
+}
+
+.room-create-wrapper .input-container label {
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    transition: .5s all ease;
+}
+
+.room-create-wrapper .input-container label:nth-child(2) {
+    top: 16%;
+}
+
+.room-create-wrapper .input-container label:nth-child(4) {
+    top: 33%;
+}
+
+.room-create-wrapper .input-container label:nth-child(7) {
+    top: 50%;
+}
+
+/*-------------SHOW PASSWORD-----------------*/
+.room-create-wrapper .input-container span#show-pass {
+    width: 20px;
+    height: 20px;
+    background-image: url(./icons8-show-password-50.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 13%;
+    top: 47%;
+}
+
+.room-create-wrapper .input-container span#show-pass:hover {
+    cursor: pointer;
+}
+
+/*------------END OF SHOW PASSWORD-----------------*/
+
+
+/*--------------SPAN WAVY DESIGN-------------*/
+
+.room-create-wrapper .input-container label span {
+    position: absolute;
+    transition: .4s all ease;
+}
+
+.room-create-wrapper .input-container label span.wavySpan,
+.room-create-wrapper .input-container input:valid+label span {
+    transform: translateY(-200%);
+}
+
+/*-------END OF SPAN WAVY DESIGN-------------*/
+
+/*------------------BUTTON DESIGN---------------------*/
+.room-create-wrapper .input-container button {
+    margin-top: 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 28px;
+    margin-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    letter-spacing: 4px;
+    word-spacing: .8px;
+    background-color: rgba(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px aqua;
+    transition: .6s all ease;
+}
+
+.room-create-wrapper .input-container button:hover {
+    transform: scale(.9);
+    box-shadow: 0px 0px 15px 5px aqua;
+    color: aqua;
+    letter-spacing: 2px;
+    word-spacing: .8px;
+}
+
+/*------------------END OF BUTTON DESIGN--------------*/
+
+/*===================================================================END OF BODY DESIGN====================================================*/
+@media (max-width:445px) {
+    .room-create-wrapper .input-container {
+        padding: 30px 30px 0 30px;
+        width: 100%;
+    }
+
+    .room-create-wrapper .input-container input {
+        width: 95%;
+        height: 40px;
+    }
+
+    .room-create-wrapper .input-container button {
+        width: 200px;
+        height: 40px;
+        margin-left: 22%;
+        margin-top: 10%;
+    }
+}
+@media (max-width:320px){
+    .room-create-wrapper .input-container button{
+        margin-left: 12%;
+    }
+}
+
+/*========================================================================INPUT DESIGN====================================================*/

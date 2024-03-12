@@ -1,0 +1,281 @@
+/*===============================================================================BINGO GAME PAGE DESIGN===========================================================*/
+.bingo-gamepage-wrapper {
+    display: flex;
+    width: 100%;
+    height: 10dvh;
+}
+
+/*------------------------------------HAMBURGER MENU DESIGN--------------------------------------*/
+
+.bingo-gamepage-wrapper .hamburger {
+    padding: 20px;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.bingo-gamepage-wrapper .hamburger div {
+    width: 40px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 25px;
+}
+.bingo-gamepage-wrapper .hamburger div:not(:first-child){
+    margin: 6px 0;
+}
+
+
+
+/*------------------------------------END OF HAMBURGER MENU DESIGN--------------------------------------*/
+
+/*===============================================================================GAMEPAGE LEFT PANEL DESIGN===============================================================*/
+.bingo-gamepage-wrapper .left {
+    display: flex;
+    flex-direction: column;
+    padding: 8dvh 20px;
+    height: 84dvh;
+    background-color: rgb(50 103 142 / 63%);
+}
+
+.bingo-gamepage-wrapper .left .player-data {
+    width: 150px;
+    padding: 5px 5px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(36, 214, 211, 0.529);
+    transition: .4s all ease;
+}
+
+.bingo-gamepage-wrapper .left .player-data p {
+    font-size: 10pt;
+    margin-right: 3px;
+    letter-spacing: 1.1pt;
+    -webkit-text-stroke-width: .4pt;
+}
+
+.bingo-gamepage-wrapper .left .player-data div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+/*===============================================================================END OF GAMEPAGE LEFT PANEL DESIGN========================================================*/
+
+/*===============================================================================GAMEPAGE RIGHT PANEL DESIGN================================================================*/
+.bingo-gamepage-wrapper .right {
+    position: relative;
+    width: 88%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f232e;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div div {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-text-stroke-width: .6pt;
+    color: white;
+    border: 1px solid white;
+    transition: .4s all ease;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div div.active-div {
+    background-color: #008bff52;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div div:hover,
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div div:focus {
+    font-size: 20pt;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div:first-child div:first-child,
+.bingo-gamepage-wrapper .right .bingo-container .bingo-input-div:first-child select:first-child {
+    border-top-left-radius: 15px;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div:first-child div:last-child,
+.bingo-gamepage-wrapper .right .bingo-container .bingo-input-div:first-child select:last-child {
+    border-top-right-radius: 15px;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div:nth-child(5) div:first-child,
+.bingo-gamepage-wrapper .right .bingo-container .bingo-input-div:nth-child(5) select:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div:nth-child(5) div:last-child,
+.bingo-gamepage-wrapper .right .bingo-container .bingo-input-div:nth-child(5) select:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div div.clickedDiv {
+    font-size: 20pt;
+}
+
+.bingo-gamepage-wrapper .right button {
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    letter-spacing: 1.2pt;
+    font-size: 10pt;
+    -webkit-text-stroke-width: 1pt;
+    margin-top: 20px;
+    margin: 15px 10px 0 10px;
+    background-color: white;
+    color: white;
+    background-color: black;
+    transition: .4s all ease;
+}
+
+.bingo-gamepage-wrapper .right button:not(.inactive-start-btn) {
+    box-shadow: 0 0 15px rgb(0, 200, 255);
+}
+
+.bingo-gamepage-wrapper .right button:not(.inactive-start-btn):hover,
+.bingo-gamepage-wrapper .right button:not(.inactive-start-btn):focus {
+    box-shadow: 0 0 15px 5px aqua;
+    transform: scale(.96);
+    color: aqua;
+}
+
+.bingo-gamepage-wrapper .right .bingo-container .bingo-input-div select {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 13pt;
+    cursor: pointer;
+    -webkit-text-stroke-width: .4pt;
+}
+
+/*-----------------------------NOTIFICATION DESIGN--------------------*/
+.bingo-gamepage-wrapper .right .notification-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-bottom: 20px;
+    padding: 0 2%;
+}
+
+.bingo-gamepage-wrapper .right .notification-container .notification,
+.bingo-gamepage-wrapper .right .notification-container .currentTurn-notification {
+    font-size: 10pt;
+    -webkit-text-stroke-width: .6pt;
+    letter-spacing: 1.2pt;
+    background-color: aqua;
+    padding: 10px 28px;
+    border-radius: 15px;
+    min-width: 150px;
+    text-align: center;
+    opacity: 0;
+    transition: .4s all ease;
+}
+
+.bingo-gamepage-wrapper .right .notification-container .currentTurn-notification {
+    background-color: rgb(0, 162, 255);
+}
+
+.bingo-gamepage-wrapper .right .notification-container .show-notification {
+    opacity: 1;
+}
+
+/*-----------------------------END OF NOTIFICATION DESIGN-------------*/
+
+/*-----------------------------WINNER NOTIFICATION DESIGN-------------*/
+
+.bingo-gamepage-wrapper .right .winner-declare {
+    position: absolute;
+    top: 25%;
+    min-width: 200px;
+    height: max-content;
+    padding: 50px 80px;
+    border: 2px solid black;
+    border-radius: 15px;
+
+    display: grid;
+    place-items: center;
+    font-size: 13pt;
+    font-weight: bolder;
+    letter-spacing: 1.1pt;
+    background-color: rgb(11, 186, 245);
+    box-shadow: 0 0 15px 5px black;
+}
+
+.bingo-gamepage-wrapper .right .winner-declare button {
+    margin-top: 20px;
+    border-radius: 25px;
+}
+
+/*-----------------------------END OF WINNER NOTIFICATION DESIGN-------------*/
+/*===============================================================================END OF GAMEPAGE RIGHT PANEL DESIGN=========================================================*/
+@media (max-width:405px){
+    .bingo-gamepage-wrapper .right .winner-declare{
+        padding: 30px 50px;
+        font-size: 10pt;
+        -webkit-text-stroke-width: .4pt;
+    }
+    .bingo-gamepage-wrapper .right .winner-declare button{
+        width: 130px;
+        height: 30px;
+        font-size: 8pt;
+        -webkit-text-stroke-width: .4pt;
+    }
+}
+@media (max-width:316px){
+    .bingo-gamepage-wrapper .right .winner-declare{
+        padding: 30px 50px;
+        min-width: 150px;
+    }
+}
+@media (max-width:720px) {
+    .bingo-gamepage-wrapper .left{
+        position: fixed;
+        z-index: 1;
+        left: -200%;
+        background-color: rgb(60 58 58 / 44%);
+        backdrop-filter: blur(5px);
+        transition: .4s all ease;
+    }
+    .bingo-gamepage-wrapper .right{
+        width: 100%;
+    }
+    .bingo-gamepage-wrapper .hamburger{
+        display: block;
+    }
+}
+@media (max-width:366px){
+    .bingo-gamepage-wrapper .right .bingo-container .bingo-select-field-div div,
+    .bingo-gamepage-wrapper .right .bingo-container .bingo-input-div select {
+        width: 50px;
+        height: 50px;
+        -webkit-text-stroke-width: .4pt;
+    }
+    .bingo-gamepage-wrapper .right button {
+        width: 120px;
+        height: 30px;
+        font-size: 9pt;
+        -webkit-text-stroke-width: .4pt;
+    }
+}
+.bingo-gamepage-wrapper div.active-menu{
+    left: 0%;
+}
+/*===============================================================================END OF BINGO GAME PAGE DESIGN====================================================*/
